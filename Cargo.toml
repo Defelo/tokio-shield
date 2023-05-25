@@ -1,0 +1,16 @@
+[package]
+name = "tokio-shield"
+version = "0.1.0"
+description = "Prevent futures from being aborted by wrapping them in tasks"
+license = "MIT"
+documentation = "https://docs.rs/tokio-shield/"
+repository = "https://github.com/Defelo/tokio-shield"
+edition = "2021"
+rust-version = "1.56.1"
+
+[dependencies]
+futures = { version = "0.3.28", default-features = false }
+tokio = { version = "1.28.1", default-features = false, features = ["rt"] }
+
+[dev-dependencies]
+tokio = { version = "1.28.1", default-features = false, features = ["macros", "rt-multi-thread", "time", "sync"] }
