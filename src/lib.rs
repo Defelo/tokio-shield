@@ -23,7 +23,8 @@ where
 
     /// Prevent this future from being aborted by wrapping it in a task.
     ///
-    /// `future.shield().await` is equivalent to `future.try_shield().await.unwrap()`.
+    /// `future.shield().await` is equivalent to
+    /// `future.try_shield().await.unwrap()`.
     ///
     /// # Panics
     /// This function panics if awaiting the spawned task fails.
@@ -31,7 +32,8 @@ where
 
     /// Prevent this future from being aborted by wrapping it in a task.
     ///
-    /// Since the task is created using [`tokio::spawn()`], execution of this future starts immediately.
+    /// Since the task is created using [`tokio::spawn()`], execution of this
+    /// future starts immediately.
     fn try_shield(self) -> Self::TryShieldFuture;
 }
 
